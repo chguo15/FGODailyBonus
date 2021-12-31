@@ -34,5 +34,3 @@ jobs:
         TGAdminId: ${{ secrets.TELEGRAM_ADMIN_ID }}
         GithubToken: ${{ secrets.VERY_IMPORTANT_TOKEN }}
         GithubName: ${{ secrets.VERY_IMPORTANT_NAME }}
-
-
