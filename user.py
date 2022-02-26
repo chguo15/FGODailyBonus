@@ -67,7 +67,7 @@ class user:
                 break
 
         # 登陆天数
-        res = "[%s]\n`登陆天数: %s天 / %s天\n" % (
+        res = "[%s]\n登陆天数: %s天 / %s天\n" % (
             self.name,
             data['cache']['updated']['userLogin'][0]['seqLoginCount'],
             data['cache']['updated']['userLogin'][0]['totalLoginCount'])
@@ -81,7 +81,7 @@ class user:
         #res += "现存体力: %s\n" % (actMax - (actRecoverAt - mytime.GetTimeStamp()) / 300)
 
         # 友情点
-        res += "友情点: %s / %s`\n" % (
+        res += "友情点: %s / %s\n" % (
             data['response'][0]['success']['addFriendPoint'],
             data['cache']['replaced']['tblUserGame'][0]['friendPoint'])
 
@@ -101,7 +101,7 @@ class user:
                         'items']:
                     res += "%s X %s\n" % (i['name'], i['num'])
             res += '`'
-        return res + '_%s_\n--------\n' % mytime.TimeStampToString(
+        return res + '%s' % mytime.TimeStampToString(
             data['cache']['serverTime'])
 
     def topHome(self):
