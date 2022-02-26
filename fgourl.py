@@ -76,7 +76,7 @@ def SendMessageToAdmin(message):
         url = "http://%s/send_private_msg?user_id=%s&message=_%s_\n%s" % (
             Pserver, Puser, nowtime, message)
         result = json.loads(requests.get(url).text)
-
+        print(result)
 
 
 #===== End =====
