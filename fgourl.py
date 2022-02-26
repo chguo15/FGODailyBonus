@@ -73,12 +73,13 @@ Puser = ''
 def SendMessageToAdmin(message):
     if (Pserver != 'nullvalue'):
         nowtime = mytime.GetFormattedNowTime()
-        url = "http://%s/send_private_msg?user_id=%s&message=_%s_\n%s" % (
+        url = "http://%s/send_private_msg?user_id=%s&message=%s\n%s" % (
             Pserver, Puser, nowtime, message)
         result = json.loads(requests.get(url).text)
         print(result)
+        print(message)
 
-
+        
 #===== End =====
 
 
