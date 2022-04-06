@@ -37,5 +37,3 @@ jobs:
         Pserver: ${{ secrets.PSERVER }}
         Puser: ${{ secrets.PUSER }}
 
-
-get
