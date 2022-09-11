@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: '30 19 * * *'
+    - cron: '30 22 * * *'
 
 jobs:
   build:
@@ -21,6 +21,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Set time zone
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: Test
       run: |
         python3 main.py
