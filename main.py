@@ -33,10 +33,11 @@ def main():
         for i in range(userNums):
             instance = user(userIds[i], authKeys[i], secretKeys[i])
             instance.gameData()
-            time.sleep(5)
+            time.sleep(10)
             res += instance.topLogin()
-            time.sleep(2)
+            time.sleep(6)
             instance.topHome()
+        time.sleep(2)
         url.SendMessageToAdmin(res)
         url.UploadFileToRepo(mytime.GetNowTimeFileName(), res,
                              mytime.GetNowTimeFileName())
