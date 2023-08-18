@@ -39,4 +39,3 @@ jobs:
         GithubName: ${{ secrets.VERY_IMPORTANT_NAME }}
         Pserver: ${{ secrets.PSERVER }}
         Puser: ${{ secrets.PUSER }}
-
