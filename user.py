@@ -131,7 +131,7 @@ class user:
             res += '`'
 
         server_now_time = mytime.TimeStampToString(data['cache']['serverTime'])
-        res += f'_{server_now_time}_\n--------\n'
+#        res += f'_{server_now_time}_\n--------\n'
         print(res)
         return res
 
