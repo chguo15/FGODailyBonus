@@ -116,7 +116,7 @@ class user:
         # 登陆奖励
         if 'seqLoginBonus' in data['response'][0]['success']:
             bonus_message = data['response'][0]['success']['seqLoginBonus'][0]['message']
-            res += f'*{bonus_message}*\n`'
+            res += f'*{bonus_message}*\n'
 
             for i in data['response'][0]['success']['seqLoginBonus'][0]['items']:
                 res += f'{i["name"]} X {i["num"]}\n'
@@ -124,11 +124,11 @@ class user:
             if 'campaignbonus' in data['response'][0]['success']:
                 bonus_name = data['response'][0]['success']['campaignbonus'][0]['name']
                 bonus_detail = data['response'][0]['success']['campaignbonus'][0]['detail']
-                res += f'`*{bonus_name}*\n*{bonus_detail}*\n`'
+                res += f'*{bonus_name}*\n*{bonus_detail}*\n'
 
                 for i in data['response'][0]['success']['campaignbonus'][0]['items']:
                     res += f'{i["name"]} X {i["num"]}\n'
-            res += '`'
+#            res += '`'
 
         server_now_time = mytime.TimeStampToString(data['cache']['serverTime'])
 #        res += f'_{server_now_time}_\n--------\n'
