@@ -154,7 +154,7 @@ def gameData():
         s += f'appVer: {app_ver_}\n'
         s += f'dateVer: {date_ver_} Server: {data["response"][0]["success"]["dateVer"]}\n'
         s += f'dataVer: {data_ver_} Server: {data["response"][0]["success"]["dataVer"]}'
-        SendMessageToAdmin(s)
+#        SendMessageToAdmin(s)
 
         val = UpdateBundleFolder(data['response'][0]['success']['assetbundle'])
         if val == 1:
