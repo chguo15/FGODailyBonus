@@ -26,7 +26,7 @@ if UA != 'nullvalue':
 
 
 def main():
-    fgourl.SendMessageToAdmin(f'铛铛铛( \`д´) *{mytime.GetNowTimeHour()}点* 了')
+#    fgourl.SendMessageToAdmin(f'铛铛铛( \`д´) *{mytime.GetNowTimeHour()}点* 了')
     if userNums == authKeyNums and userNums == secretKeyNums:
         fgourl.ReadConf()
         fgourl.gameData()

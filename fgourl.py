@@ -73,7 +73,7 @@ Puser = ''
 def SendMessageToAdmin(message):
     if (Pserver != 'nullvalue'):
         nowtime = mytime.GetFormattedNowTime()
-        url = "http://%s/send_private_msg?user_id=%s&message=%s\n%s" % (
+        url = "http://%s?qq=%s&msg=%s\n%s" % (
             Pserver, Puser, nowtime, message)
         result = json.loads(requests.get(url).text)
         print(result)
@@ -154,7 +154,7 @@ def gameData():
         s += f'appVer: {app_ver_}\n'
         s += f'dateVer: {date_ver_} Server: {data["response"][0]["success"]["dateVer"]}\n'
         s += f'dataVer: {data_ver_} Server: {data["response"][0]["success"]["dataVer"]}'
-        SendMessageToAdmin(s)
+#        SendMessageToAdmin(s)
 
         val = UpdateBundleFolder(data['response'][0]['success']['assetbundle'])
         if val == 1:
